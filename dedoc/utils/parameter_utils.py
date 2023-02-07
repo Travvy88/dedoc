@@ -66,13 +66,12 @@ def get_param_is_one_column_document(parameters: Optional[dict]) -> Optional[boo
 def get_param_is_vertical_document(parameters: Optional[dict]) -> Optional[bool]:
     if parameters is None:
         return None
-    is_vertical_document = str(parameters.get("is_vertical_document", "auto"))
+    is_vertical_document = str(parameters.get("is_vertical_document"))
     print(is_vertical_document)
     if is_vertical_document.lower() == "auto":
         return None
     else:
         return True
-
 
 def get_param_project(parameters: Optional[dict]) -> str:
     if parameters is None:
